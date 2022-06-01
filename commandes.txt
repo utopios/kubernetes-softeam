@@ -5,3 +5,6 @@ mv ./kind /usr/bin/kind
 
 ###Kind permet de creer un cluster kubernetes dans des conteneurs docker ###
 kind create cluster --name <cluster_name>
+
+### Création d'un cluster kind avec une configuration
+kind create cluster --name with-config --config ./config-kind/config-kind.yml
