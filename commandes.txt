@@ -17,3 +17,5 @@ kubectl delete -f <chemin_description_yml>
 
 ### pour récupére la liste des pods 
 kubectl get pods -o wide 
+
+### kubectl exec -it <nom_pod> command
