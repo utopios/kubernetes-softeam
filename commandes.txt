@@ -12,5 +12,8 @@ kind create cluster --name with-config --config ./config-kind/config-kind.yml
 ### création d'une ressource kubernetes (pod) avec kubectl
 kubectl create -f <chemin_description_yml> 
 
+### suppression d'une ressource kubernetes (pod) avec kubectl
+kubectl delete -f <chemin_description_yml> 
+
 ### pour récupére la liste des pods 
 kubectl get pods -o wide 
