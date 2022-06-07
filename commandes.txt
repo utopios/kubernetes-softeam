@@ -31,3 +31,9 @@ kubectl get replicasets
 
 ###logs pour un conteneur d'un pod
 kubectl logs <nom_pod> -c <nom_conteneur>
+
+###création d'un deploiment.
+kubectl create -f <chemin_ressource>
+
+###Changement d'image pour un dploiement 
+kubectl set image deployment/<nom_deploiement> <nom_container>=<nouvelle image>
