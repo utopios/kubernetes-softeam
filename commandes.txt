@@ -25,3 +25,6 @@ kubectl get pods -o wide
 kubectl create -f <chemin_replicaset>
 # scaler les pods avec les replicasets
 kubectl scale --replicas=3 replicaset first-replica
+
+###List des replicasets
+kubectl get replicasets
