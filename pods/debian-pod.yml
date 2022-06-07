@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: debian-pod
+  labels:
+    app: debian-pod
+spec:
+  containers:
+    - name: container-debian
+      image: redis
+      imagePullPolicy: IfNotPresent
