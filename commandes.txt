@@ -8,6 +8,7 @@ kind create cluster --name <cluster_name>
 
 ### Création d'un cluster kind avec une configuration
 kind create cluster --name with-config --config ./config-kind/config-kind.yml
+kind delete cluster --name <nom_cluster>
 
 ### création d'une ressource kubernetes (pod) avec kubectl
 kubectl create -f <chemin_description_yml> 
