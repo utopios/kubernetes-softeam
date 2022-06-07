@@ -19,3 +19,8 @@ kubectl delete -f <chemin_description_yml>
 kubectl get pods -o wide 
 
 ### kubectl exec -it <nom_pod> command
+
+###Création des replicasets => en utilisant kubectl
+kubectl create -f <chemin_replicaset>
+# scaler les pods avec les replicasets
+kubectl scale --replicas=3 replicaset first-replica
