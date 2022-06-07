@@ -19,6 +19,8 @@ spec:
         - name: container-nginx
           image: nginx:perl
           imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
           resources:
             limits:
               cpu: "100m"
