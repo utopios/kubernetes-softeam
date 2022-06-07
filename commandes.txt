@@ -28,3 +28,6 @@ kubectl scale --replicas=3 replicaset first-replica
 
 ###List des replicasets
 kubectl get replicasets
+
+###logs pour un conteneur d'un pod
+kubectl logs <nom_pod> -c <nom_conteneur>

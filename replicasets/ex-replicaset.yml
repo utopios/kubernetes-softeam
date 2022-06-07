@@ -1,21 +1,22 @@
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
-  name: first-replica
+  name: exercice-replica
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: nginx-pod
+      app: web-app
   #la definition du pod
   template:    
     metadata:
-      name: nginx-pod
+      name: web-app
       labels:
-        app: nginx-pod
+        app: web-app
     spec:
       containers:
         - name: container-nginx
           image: nginx
           imagePullPolicy: IfNotPresent
-        
+        - name: container-mysql
+          image: mysql
