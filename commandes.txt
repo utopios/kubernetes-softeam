@@ -37,3 +37,8 @@ kubectl create -f <chemin_ressource>
 
 ###Changement d'image pour un dploiement 
 kubectl set image deployment/<nom_deploiement> <nom_container>=<nouvelle image>
+
+##Accéder à l'historique du déploiement 
+kubectl rollout history deployment/<nom_deployment>
+##retour vers une version d'un deploiement
+kubectl rollout undo deployment/<nom_deployment> --to-revision=1
