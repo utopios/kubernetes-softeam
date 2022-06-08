@@ -1,0 +1,27 @@
+#--Deploiement pour note web-app
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-app-deployment
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: web-app-pod
+  #la definition du pod
+  template:    
+    metadata:
+      name: web-app-pod
+      labels:
+        app: web-app-pod
+    spec:
+      containers:
+        - name: container-web-app
+          image: web-app-image
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 80
+          resources:
+            limits:
+              cpu: "100m"
+              memory: "128Mi"

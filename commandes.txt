@@ -58,6 +58,12 @@ kind load docker-image <nom_image>
 #Correction exercice app web
 Etape 0: Préparation de kind pour ouvrir les ports(car on utilise kind comme cluster local)
 Etape 1: build de l'image docker et envoie vers le cluster.
+docker build -t web-app-image <chemin_vers_dockerfile>
+kind --name with-config load docker-image web-app-image
 Etape 2: Créer le déploiement avec le nombre de replicas et le pod.
+##Après la création des ressources yaml pour le déploiement
+kubectl create -f source-tp/app-web-source/k8s/deployment.yml
 Etape 3: Créer le service pour envoyer le trafic vers notre application web.
+##Après la création des ressources yaml pour un service nodePort
+kubectl create -f source-tp/app-web-source/k8s/service.yml
 
