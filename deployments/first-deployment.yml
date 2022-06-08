@@ -10,7 +10,8 @@ spec:
   #la definition du pod
   template:    
     metadata:
-      name: nginx-pod
+      name: nginx-pod-dev
+      namespace: env-dev
       labels:
         app: nginx-pod
         prod: nginx-prod

@@ -67,3 +67,5 @@ Etape 3: Créer le service pour envoyer le trafic vers notre application web.
 ##Après la création des ressources yaml pour un service nodePort
 kubectl create -f source-tp/app-web-source/k8s/service.yml
 
+
+### pour utiliser un namespace autre que default, on ajoute l'option -n <nom_namespace> avec commande kubectl.
