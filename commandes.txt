@@ -48,3 +48,9 @@ kubectl autoscale deployment <nom_deployment> --min=2 --max=5
 
 ### Création de service
 kubectl create -f <chemin_vers_le_service>
+
+##Commande pour build d'une image docker
+docker build -t <nom_image> <chemin_vers_dockerfile> par exemple si la commande dans le dossier du dockefile <.>
+
+##Après le build d'une image docker en local, on peut l'envoyer vers un cluster kind avec la commande suivante.
+kind load docker-image <nom_image>
