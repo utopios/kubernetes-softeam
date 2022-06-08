@@ -45,3 +45,6 @@ kubectl rollout undo deployment/<nom_deployment> --to-revision=1
 
 ### Utilisation du autoscale avec les deployments
 kubectl autoscale deployment <nom_deployment> --min=2 --max=5
+
+### Création de service
+kubectl create -f <chemin_vers_le_service>
