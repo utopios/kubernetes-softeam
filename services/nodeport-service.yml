@@ -1,19 +1,18 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: clusterip-http-service
+  name: nodeport-http-service
 spec:
-  type: ClusterIP
+  type: NodePort
   selector:
     app: nginx-pod
   ports:
-  #-- port du service
+  #-- port du service cluster IP
   - port: 1000
   #-- port du conteneur
     targetPort: 80
     protocol: TCP
+  #--- Port d'un service node port entre 30000 et 32767
+    nodePort: 30001
     name: http-port
-  - port: 1001
-    targetPort: 443
-    protocol: TCP
-    name: https-port
+  
