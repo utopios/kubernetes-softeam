@@ -1,0 +1,11 @@
+-postgres : 
+    -l'utilisateur => postgres, le mot de passe => postgres
+    -le service qui renvoie vers postgres doit s'appeler db
+    - image postgres:9.4
+        
+        - variables env:
+            POSTGRES_USER => postgres
+            POSTGRES_PASSWORD => postgres
+
+-redis:
+    - le service qui renvoie vers redis doit d'appeler redis.
