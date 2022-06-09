@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: limi-web-app
+  namespace: web-app
+spec:
+  hard:
+    limits.cpu: "500m"
+    limits.memory: 1Gi
+    

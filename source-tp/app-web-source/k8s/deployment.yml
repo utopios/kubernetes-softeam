@@ -3,6 +3,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: web-app-deployment
+  namespace: web-app
 spec:
   replicas: 5
   selector:

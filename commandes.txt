@@ -68,4 +68,5 @@ Etape 3: Créer le service pour envoyer le trafic vers notre application web.
 kubectl create -f source-tp/app-web-source/k8s/service.yml
 
 
-### pour utiliser un namespace autre que default, on ajoute l'option -n <nom_namespace> avec commande kubectl.
+### pour utiliser un namespace autre que default,
+ on ajoute l'option -n <nom_namespace> avec une commande kubectl.
