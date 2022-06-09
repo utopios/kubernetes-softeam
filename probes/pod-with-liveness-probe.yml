@@ -15,14 +15,22 @@ spec:
           memory: "128Mi"
       livenessProbe:
         #-- Execute handler
-        # exec:
-        #   command:
-        #     - "mkdir /tmp"
-        #     - "cat /tmp"
+        exec:
+          command:
+            #- "mkdir /tmp"
+            - "cat index2.html"
         #-- HttpGet handler
-        httpGet:
-          path: /healty
-          port: 80
-          httpHeaders:
-            - name: "token-api"
-              value: "value-of-token-api"
+        # httpGet:
+        #   path: /healty
+        #   port: 80
+        #   httpHeaders:
+        #     - name: "token-api"
+        #       value: "value-of-token-api"
+        #-- TcpSocket Handler
+        # tcpSocket:
+        #   port: 80
+        
+        periodSeconds: 10
+        initialDelaySeconds: 5
+
+
