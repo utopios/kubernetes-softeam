@@ -9,3 +9,10 @@
 
 -redis:
     - le service qui renvoie vers redis doit d'appeler redis.
+
+Etapes:
+    0 - Recréer un cluster kind avec le bon mapping des ports.
+    1 - Créer les images local, envoie des images dans le cluster.
+    2 - Créer le namespace et la configuration des quotas.
+    3 - Créer les services.
+    4 - Créer les déploiements.
