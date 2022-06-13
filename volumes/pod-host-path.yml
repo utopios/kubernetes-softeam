@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+  labels:
+    app: nginx-pod
+spec:
+  containers:
+    - name: container-nginx
+      image: nginx
+      imagePullPolicy: IfNotPresent
+      volumeMounts:
+        - mountPath: /usr/share/nginx/html
+          name: html
+  volumes:
+    - name: html
+      hostPath:
+        path: /data
+        type: DirectoryOrCreate
