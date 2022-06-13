@@ -20,3 +20,7 @@ kubectl create -f ressources/k8s/namespace.yml
 #Création des services de types node port
 kubectl create -f ressources/k8s/service-node-port-result.yml
 kubectl create -f ressources/k8s/service-node-port-vote.yml
+
+#création des services de types cluster ip
+kubectl create -f ressources/k8s/cluster-ip-postgres.yml
+kubectl create -f ressources/k8s/cluster-ip-redis.yml
