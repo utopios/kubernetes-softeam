@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: postgres-deployment
+  namespace: tp-kubernetes
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tp-postgres
+  template:    
+    metadata:
+      name: tp-postgres
+      namespace: tp-kubernetes
+      labels:
+        app: tp-postgres
+    spec:
+      containers:
+        - name: postgres
+          image: postgres:9.4
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 5432
+          env:
+            - name: POSTGRES_USER
+              value: postgres
+            - name: POSTGRES_PASSWORD
+              value: postgres
+          resources:
+            limits:
+              cpu: "100m"
+              memory: "128Mi"
