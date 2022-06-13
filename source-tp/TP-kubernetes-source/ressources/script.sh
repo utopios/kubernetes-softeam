@@ -16,3 +16,7 @@ kind load docker-image tp-vote --name tp-kubernetes
 
 #Création du namespace
 kubectl create -f ressources/k8s/namespace.yml
+
+#Création des services de types node port
+kubectl create -f ressources/k8s/service-node-port-result.yml
+kubectl create -f ressources/k8s/service-node-port-vote.yml
