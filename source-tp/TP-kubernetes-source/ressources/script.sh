@@ -28,3 +28,8 @@ kubectl create -f ressources/k8s/cluster-ip-redis.yml
 #création des depolyments pour redis et postgres
 kubectl create -f ressources/k8s/deployment-postgres.yml
 kubectl create -f ressources/k8s/deployment-redis.yml
+
+#création des deployments pour vote, result, worker
+kubectl create -f ressources/k8s/deployment-vote.yml
+kubectl create -f ressources/k8s/deployment-result.yml
+kubectl create -f ressources/k8s/deployment-worker.yml
