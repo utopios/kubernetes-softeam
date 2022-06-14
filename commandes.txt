@@ -70,3 +70,9 @@ kubectl create -f source-tp/app-web-source/k8s/service.yml
 
 ### pour utiliser un namespace autre que default,
  on ajoute l'option -n <nom_namespace> avec une commande kubectl.
+
+
+#ajouter un label à un node
+kubectl label node <node_name> <key>=<value>
+#pour supprimer un label d'un node
+kubectl label node <node_name> <key>-

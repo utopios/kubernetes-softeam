@@ -1,0 +1,44 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+  labels:
+    app: nginx-pod
+spec:
+  containers:
+    - name: container-nginx
+      image: nginx
+      imagePullPolicy: IfNotPresent
+      resources:
+        limits:
+          cpu: "100m"
+          memory: "128Mi"
+  # # -- spécification du nom du noeud
+  # nodeName: tp-kubernetes-worker
+  # nodeSelector:
+  #   type: web
+  affinity:
+    nodeAffinity:
+      # requiredDuringSchedulingIgnoredDuringExecution:
+      #   nodeSelectorTerms:
+      #     - matchExpressions:
+      #         - key: type
+      #           operator: In, #-- NotIn, Exists,... Gt, Lt
+      #           values:
+      #             - web
+      #             - job
+      preferredDuringSchedulingIgnoredDuringExecution:
+        - weight: 2
+          preference:
+            matchExpressions:
+              - key: type
+                operator: In, #-- NotIn, Exists,... Gt, Lt
+                values:
+                  - web
+        - weight: 1
+          preference:
+            matchExpressions:
+              - key: type
+                operator: In, #-- NotIn, Exists,... Gt, Lt
+                values:
+                  - job
