@@ -16,3 +16,8 @@ Etapes:
     2 - Créer le namespace et la configuration des quotas Fait.
     3 - Créer les services Fait.
     4 - Créer les déploiements.
+
+ - On souhaite ajouter un volume pour postgres.
+ - On souhaite partager les variables d'env du deploiement postgres par des ConfigMaps et des secrets
+
+
