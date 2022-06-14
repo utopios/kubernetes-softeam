@@ -19,14 +19,13 @@ spec:
   #   type: web
   affinity:
     nodeAffinity:
-      # requiredDuringSchedulingIgnoredDuringExecution:
-      #   nodeSelectorTerms:
-      #     - matchExpressions:
-      #         - key: type
-      #           operator: In, #-- NotIn, Exists,... Gt, Lt
-      #           values:
-      #             - web
-      #             - job
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+          - matchExpressions:
+              - key: type
+                operator: NotIn, #-- NotIn, Exists,... Gt, Lt
+                values:
+                  - malware
       preferredDuringSchedulingIgnoredDuringExecution:
         - weight: 2
           preference:
