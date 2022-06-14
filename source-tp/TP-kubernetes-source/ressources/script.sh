@@ -25,6 +25,10 @@ kubectl create -f ressources/k8s/service-node-port-vote.yml
 kubectl create -f ressources/k8s/cluster-ip-postgres.yml
 kubectl create -f ressources/k8s/cluster-ip-redis.yml
 
+#Création des volumes pour postgres
+kubectl create -f ressources/k8s/persistent-volumes.yml
+kubectl create -f ressources/k8s/persistent-volumes-claim.yml
+
 #création des depolyments pour redis et postgres
 kubectl create -f ressources/k8s/deployment-postgres.yml
 kubectl create -f ressources/k8s/deployment-redis.yml

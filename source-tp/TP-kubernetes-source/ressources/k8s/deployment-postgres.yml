@@ -21,12 +21,26 @@ spec:
           imagePullPolicy: IfNotPresent
           ports:
             - containerPort: 5432
+          volumeMounts:
+            - mountPath: /var/lib/postgresql/data
+              name: vol-postgres
           env:
             - name: POSTGRES_USER
-              value: postgres
+              valueFrom:
+                configMapKeyRef:
+                  key: POSTGRE_USER
+                  name: tp-config-map
             - name: POSTGRES_PASSWORD
-              value: postgres
+              valueFrom:
+                secretKeyRef:
+                  key: POSTGRES_PASSWORD
+                  name: tp-secrets
           resources:
             limits:
               cpu: "100m"
               memory: "128Mi"
+      volumes:
+        - name: vol-postgres
+          persistentVolumeClaim:
+            claimName: tp-volume-claim
+
