@@ -76,3 +76,11 @@ kubectl create -f source-tp/app-web-source/k8s/service.yml
 kubectl label node <node_name> <key>=<value>
 #pour supprimer un label d'un node
 kubectl label node <node_name> <key>-
+
+#pour ajouter une  taint sur un nodes
+kubectl taint nodes <node_name> key=value:<taint-effect>
+
+Effect :
+    1 - NoSchedule
+    2 - PreferNoSchedule
+    3 - NoExecute
