@@ -15,3 +15,8 @@ spec:
             configMapKeyRef:
               name: ma-config-map
               key: USER
+        - name: PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysecret
+              key: PASSWORD
