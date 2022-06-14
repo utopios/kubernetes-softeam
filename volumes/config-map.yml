@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: ma-config-map
+data:
+  USER: value of user
+  PASSWORD: value_of_password

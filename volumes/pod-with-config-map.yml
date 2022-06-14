@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod
+  labels:
+    app: nginx-pod
+spec:
+  containers:
+    - name: container-nginx
+      image: nginx
+      imagePullPolicy: IfNotPresent
+      env:
+        - name: USER_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: ma-config-map
+              key: USER
