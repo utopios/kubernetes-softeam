@@ -9,3 +9,4 @@ nodes:
         hostPort: 4000
   - role: worker
   - role: worker
+  - role: worker
