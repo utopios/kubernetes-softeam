@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pod-tolerent
+  labels:
+    app: nginx-pod
+spec:
+  containers:
+    - name: container-nginx
+      image: nginx
+      imagePullPolicy: IfNotPresent
+      resources:
+        limits:
+          cpu: "100m"
+          memory: "128Mi"
+  tolerations:
+    - key: type
+      operator: "Equal"
+      value: "notsafe"

@@ -84,3 +84,6 @@ Effect :
     1 - NoSchedule
     2 - PreferNoSchedule
     3 - NoExecute
+
+par exemple avec le wroker tp-kubernetes-worker
+kubeclt taint nodes tp-kubernetes-worker type:notsafe:NoSchedule
