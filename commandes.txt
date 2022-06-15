@@ -86,7 +86,7 @@ Effect :
     3 - NoExecute
 
 par exemple avec le wroker tp-kubernetes-worker
-kubeclt taint nodes tp-kubernetes-worker type:notsafe:NoSchedule
+kubectl taint nodes tp-kubernetes-worker type:notsafe:NoSchedule
 
 
 - Exercice 
@@ -97,4 +97,6 @@ kubeclt taint nodes tp-kubernetes-worker type:notsafe:NoSchedule
   Déployer scanner sur la totalité du cluster avec une tolerance pour les noeuds type malware.
     pour déployer le scanner sur la totalité du cluster, on utilise un daemonset
   Ajouter une taint sur le node n°2 avec label type malware avec exclusion des pods.
+    kubectl taint nodes tp-kubernetes-worker2 type=malware:NoExecute
   Supprimer le taint du node N°2
+    kubectl taint nodes tp-kubernetes-worker2 type=malware:NoExecute-
