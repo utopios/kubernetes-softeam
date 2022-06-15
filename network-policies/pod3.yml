@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pod3
+  labels:
+    app: pod3
+spec:
+  containers:
+    - name: container3
+      image: nginx
+      imagePullPolicy: IfNotPresent
+      ports:
+        - containerPort: 80
+      resources:
+        limits:
+          cpu: "100m"
+          memory: "128Mi"
