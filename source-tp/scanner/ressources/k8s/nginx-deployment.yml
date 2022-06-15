@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: scanner-nginx-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx-pod
+  #la definition du pod
+  template:    
+    metadata:
+      name: nginx-pod-dev
+      namespace: env-dev
+      labels:
+        app: nginx-pod
+        prod: nginx-prod
+    spec:
+      containers:
+        - name: container-nginx
+          image: nginx:perl
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+          resources:
+            limits:
+              cpu: "100m"
+              memory: "128Mi"
+      nodeSelector:
+        type: web

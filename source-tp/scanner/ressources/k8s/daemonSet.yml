@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: scanner-daemonset
+spec:
+  #--pod
+  template:
+    metadata:
+      name: scanner-pod
+      labels:
+        app: scanner
+    spec:
+      containers:
+        - name: scanner
+          image: scanner
+          imagePullPolicy: Never
+          command:
+            - "bash"
+      tolerations:
+      - key: type
+        operator: "Equal"
+        value: "malware"
+  #-- selection du pod par le label
+  selector:
+    matchLabels:
+      app: scanner
+    

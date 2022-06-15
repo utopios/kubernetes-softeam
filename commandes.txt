@@ -91,6 +91,10 @@ kubeclt taint nodes tp-kubernetes-worker type:notsafe:NoSchedule
 
 - Exercice 
   Déployer un pod avec nginx sur des nodes avec le label web (1, 2)
+    -- Ajouter un label type=web sur les deux nodes:
+       kubectl label node tp-kubernetes-worker type=web
+       kubectl label node tp-kubernetes-worker2 type=web
   Déployer scanner sur la totalité du cluster avec une tolerance pour les noeuds type malware.
+    pour déployer le scanner sur la totalité du cluster, on utilise un daemonset
   Ajouter une taint sur le node n°2 avec label type malware avec exclusion des pods.
   Supprimer le taint du node N°2
