@@ -1,0 +1,36 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: first-cron-job
+spec:
+  schedule: "0 */12 * * *"  
+  jobTemplate:
+    spec:
+      selector:
+        matchLabels:
+          app: exercice-cronjob
+      template:
+        metadata:
+          name: exercice-cronjob
+          labels:
+            app: exercice-cronjob
+        spec:
+          containers:
+            - name: alpine
+              image: alpine
+              command: ["echo", "date", ">>", "/data/datetime.log", "&"]
+                # - "echo"
+                # - "date"
+                # - ">>"
+                # - "datetime.log"
+                # - "&"
+              volumeMounts:
+                - mountPath: /data
+                  name: correction-volume-cronjob
+          volumes:
+            - name: correction-volume-cronjob
+              persistentVolumeClaim:
+                claimName: mypvc
+
+          
+    
