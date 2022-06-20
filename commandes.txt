@@ -104,3 +104,6 @@ kubectl taint nodes tp-kubernetes-worker type:notsafe:NoSchedule
 
 -- Ajout d'un proxy pour se connecter à l'api rest de kubernetes en utilisant le context de kubectl
 kubectl proxy --port=8081
+
+-- Pour accéder à l'api à partir du cluster:
+  - Ressource 1 => serviceAcount
