@@ -106,4 +106,7 @@ kubectl taint nodes tp-kubernetes-worker type:notsafe:NoSchedule
 kubectl proxy --port=8081
 
 -- Pour accéder à l'api à partir du cluster:
-  - Ressource 1 => serviceAcount
+  - Ressource 1 => serviceAccount, type de compte de service
+  - Ressource 2 => Role : <Ressources kubernetes à exploiter 'pods, services, deployments...'>
+  - Ressource 3 => RoleBinding <Associer un type de role à un type de compte de service>
+  => à la création du pods, on va associer le pod à notre type de compte.
