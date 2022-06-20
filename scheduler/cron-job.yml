@@ -1,0 +1,22 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: first-cron-job
+spec:
+  schedule: "0 0 * * *"  
+  jobTemplate:
+    spec:
+      selector:
+        matchLabels:
+          app: nginx-pod
+      template:
+        metadata:
+          name: nginx-pod-dev
+          labels:
+            app: nginx-pod
+        spec:
+          containers:
+            - name: container-nginx
+              image: nginx:perl
+          
+    
