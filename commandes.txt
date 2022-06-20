@@ -100,3 +100,7 @@ kubectl taint nodes tp-kubernetes-worker type:notsafe:NoSchedule
     kubectl taint nodes tp-kubernetes-worker2 type=malware:NoExecute
   Supprimer le taint du node N°2
     kubectl taint nodes tp-kubernetes-worker2 type=malware:NoExecute-
+
+
+-- Ajout d'un proxy pour se connecter à l'api rest de kubernetes en utilisant le context de kubectl
+kubectl proxy --port=8081
