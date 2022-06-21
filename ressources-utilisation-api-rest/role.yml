@@ -4,12 +4,16 @@ metadata:
   name: first-role
   labels:
     name: first-role
-  rules:
-    - resources:
-        - pods
-        - services
-      verbs:
-        - get
-        - list
-        - create
-        - delete
+rules:
+  - resources:
+      - pods
+      - services
+    verbs:
+      - get
+      - list
+      - create
+      - delete
+    apiGroups:
+      - "v1"
+      - "apps/v1"
+ 
