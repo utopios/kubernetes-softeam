@@ -14,6 +14,6 @@ rules:
       - create
       - delete
     apiGroups:
-      - "v1"
-      - "apps/v1"
+      - ""
+      - "apps"
  
