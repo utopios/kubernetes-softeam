@@ -116,3 +116,8 @@ kubectl proxy --port=8081
   host APIserver à l'interieur du cluster kubernetes => https://kubernetes.default.svc
 
   Une requête avec un header => Authorization: Bearer <token>
+
+  Exercice :
+
+  Afficher la liste des pods à partir d'une application dans un pod du cluster.
+  
