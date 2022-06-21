@@ -110,3 +110,9 @@ kubectl proxy --port=8081
   - Ressource 2 => Role : <Ressources kubernetes à exploiter 'pods, services, deployments...'>
   - Ressource 3 => RoleBinding <Associer un type de role à un type de compte de service>
   => à la création du pods, on va associer le pod à notre type de compte.
+
+  Pour communiquer avec l'api, on récupère le token /var/run/secrets/kubernetes.io/serviceaccount/token
+
+  host APIserver à l'interieur du cluster kubernetes => https://kubernetes.default.svc
+
+  Une requête avec un header => Authorization: Bearer <token>
