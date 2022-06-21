@@ -30,3 +30,17 @@ Images :
                 ELASTICSEARCH_URL => <nom_service>:port
             
             -port : 5601
+
+Etapes :
+    1 - Configurtion du cluster (kind) avec le mappage des ports.  
+    2 - Création des namespaces. 
+    3 - Création des service account, role, bindingRole. 
+    4 - Création des volumes. 
+    5 - Création des services. 
+    6 - Création des networks policies. 
+    7 - Création des ressources pour les pods.
+        fluentd => daemonset
+        elasticsearch => statefulset
+        postgres => statefulset
+        mysql => statefulset
+        kibana => deployment
