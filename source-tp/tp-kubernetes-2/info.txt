@@ -32,9 +32,9 @@ Images :
             -port : 5601
 
 Etapes :
-    1 - Configurtion du cluster (kind) avec le mappage des ports.  
-    2 - Création des namespaces. 
-    3 - Création des service account, role, bindingRole. 
+    1 - Configurtion du cluster (kind) avec le mappage des ports. FAIT  
+    2 - Création des namespaces FATI. 
+    3 - Création des service account, role, bindingRole FAIT. 
     4 - Création des volumes. 
     5 - Création des services. 
     6 - Création des networks policies. 
