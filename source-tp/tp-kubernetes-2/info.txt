@@ -39,8 +39,8 @@ Etapes :
     5 - Création des services FAIT. 
     6 - Création des networks policies FAIT. 
     7 - Création des ressources pour les pods.
-        fluentd => daemonset
-        elasticsearch => statefulset
+        fluentd => daemonset FAIT.
+        elasticsearch => statefulset FAIT.
         postgres => statefulset
         mysql => statefulset
         kibana => deployment
