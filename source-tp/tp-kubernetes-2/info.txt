@@ -35,8 +35,8 @@ Etapes :
     1 - Configurtion du cluster (kind) avec le mappage des ports. FAIT  
     2 - Création des namespaces FATI. 
     3 - Création des service account, role, bindingRole FAIT. 
-    4 - Création des volumes. 
-    5 - Création des services. 
+    4 - Création des volumes FAIT. 
+    5 - Création des services FAIT. 
     6 - Création des networks policies. 
     7 - Création des ressources pour les pods.
         fluentd => daemonset
