@@ -37,7 +37,7 @@ Etapes :
     3 - Création des service account, role, bindingRole FAIT. 
     4 - Création des volumes FAIT. 
     5 - Création des services FAIT. 
-    6 - Création des networks policies. 
+    6 - Création des networks policies FAIT. 
     7 - Création des ressources pour les pods.
         fluentd => daemonset
         elasticsearch => statefulset

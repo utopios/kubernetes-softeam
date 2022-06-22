@@ -10,8 +10,12 @@ kubectl create -f ressources/k8s/fluentd/rbac.yml
 ### Etape 4 => Création du volume
 kubectl create -f ressources/k8s/elasticsearch/ressources-volume.yml
 
-### Etape 4 => Création des services
+### Etape 5 => Création des services
 kubectl create -f ressources/k8s/elasticsearch/services.yml
 kubectl create -f ressources/k8s/kibana/services.yml
 kubectl create -f ressources/k8s/mysql/services.yml
 kubectl create -f ressources/k8s/postgres/services.yml
+
+
+### Etape 6 => Création des network-policies
+kubectl create -f ressources/k8s/elasticsearch/network-policy.yml
