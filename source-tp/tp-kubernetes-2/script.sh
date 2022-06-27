@@ -19,3 +19,8 @@ kubectl create -f ressources/k8s/postgres/services.yml
 
 ### Etape 6 => Création des network-policies
 kubectl create -f ressources/k8s/elasticsearch/network-policy.yml
+
+### Etape 7  => Création des deployments
+kubectl create -f ressources/k8s/fluentd/daemonset.yml
+kubectl create -f ressources/k8s/elasticsearch/statefulset.yml
+kubectl create -f ressources/k8s/kibana/deployment.yml

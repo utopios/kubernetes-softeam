@@ -10,7 +10,7 @@ spec:
   #--pod
   template:
     metadata:
-      name: nginx-pod
+      name: fluentd-pod
       labels:
         name: fluentd
         app: client-elasticsearch
@@ -61,5 +61,5 @@ spec:
   #-- selection du pod par le label
   selector:
     matchLabels:
-      app: nginx
+      name: fluentd
     
