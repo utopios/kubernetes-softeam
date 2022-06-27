@@ -1,6 +1,6 @@
 
 apiVersion: apps/v1
-kind: StatefulSet
+kind: Deployment
 metadata:
   name: elasticsearch
   namespace: tp-monitoring
@@ -8,7 +8,7 @@ spec:
   selector:
     matchLabels:
       app: elasticsearch
-  serviceName: elasticsearch
+  # serviceName: elasticsearch
   replicas: 1
   template:
     metadata:

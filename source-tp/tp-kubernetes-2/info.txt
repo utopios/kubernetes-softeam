@@ -44,3 +44,4 @@ Etapes :
         postgres => statefulset
         mysql => statefulset
         kibana => deployment
+https://www.eweek.com/cloud/kubernetes-best-practices/
